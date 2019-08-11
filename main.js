@@ -68,6 +68,3 @@ class Timer {
 if (Notification.permission == "default") Notification.requestPermission();
 const timer = new Timer();
 document.querySelector(".button").addEventListener("click", timer.clickHandler);
-document
-  .querySelector(".button")
-  .addEventListener("touchstart", timer.clickHandler);
