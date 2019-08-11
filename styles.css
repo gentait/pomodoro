@@ -2,6 +2,7 @@ body {
   background-color: rgb(250, 124, 74);
   /* background-color: rgb(114, 224, 182); */
   color: white;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 body > * {
   margin-left: auto;
