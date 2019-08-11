@@ -38,10 +38,6 @@ body > * {
   color: inherit;
   border: 0 none;
 }
-.button:hover {
-  cursor: pointer;
-  font-weight: bold;
-}
 .button:focus {
   outline: 0 none;
 }
