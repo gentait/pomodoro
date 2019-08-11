@@ -37,6 +37,7 @@ body > * {
   background-color: inherit;
   color: inherit;
   border: 0 none;
+  cursor: pointer;
 }
 .button:focus {
   outline: 0 none;
