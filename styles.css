@@ -28,11 +28,11 @@ body > * {
 }
 .time {
   font-size: 2em;
-  padding-top: 5%;
+  padding-top: 20px;
 }
 .button {
   font-size: 2em;
-  padding-top: 5%;
+  padding-top: 20px;
 }
 .button:hover {
   cursor: pointer;
