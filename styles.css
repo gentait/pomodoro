@@ -28,15 +28,22 @@ body > * {
 }
 .time {
   font-size: 2em;
-  padding-top: 20px;
+  margin-top: 20px;
 }
 .button {
+  display: block;
   font-size: 2em;
-  padding-top: 20px;
+  margin-top: 20px;
+  background-color: inherit;
+  color: inherit;
+  border: 0 none;
 }
 .button:hover {
   cursor: pointer;
   font-weight: bold;
+}
+.button:focus {
+  outline: 0 none;
 }
 @media only screen and (max-width: 1000px) {
   h1 {
