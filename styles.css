@@ -28,13 +28,44 @@ body > * {
 }
 .time {
   font-size: 2em;
+  padding-top: 5%;
 }
 .button {
   font-size: 2em;
-  width: 200px;
-  height: 100px;
+  padding-top: 5%;
 }
 .button:hover {
   cursor: pointer;
   font-weight: bold;
+}
+@media screen and (min-width: 960px) {
+  h1 {
+    width: 100%;
+    font-size: 4em;
+  }
+  .clock {
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 600px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+  .hand {
+    width: 20px;
+    height: 250px;
+    background: white;
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 10px);
+    transform-origin: bottom;
+  }
+  .time {
+    font-size: 6em;
+  }
+  .button {
+    font-size: 6em;
+  }
+}
+@media screen and (min-width: 960px) {
 }
