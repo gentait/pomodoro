@@ -10,14 +10,13 @@ class Timer {
   }
   timerId;
   isStartButton = true;
+  isWorkTime = true;
   pastMs = 0;
   pastMsAll = 0;
-  startTimer(minutes, isWorkTime) {
+  startTimer(minutes) {
     this.button.textContent = "STOP";
     this.isStartButton = false;
-    this.body.style.backgroundColor = isWorkTime
-      ? "rgb(250, 124, 74)"
-      : "rgb(114, 224, 182)";
+
     const settingMs = minutes * 60 * 1000;
     const hand = document.querySelector(".hand");
     const time = document.querySelector(".time");
@@ -50,10 +49,13 @@ class Timer {
   async clickHandler() {
     if (this.isStartButton) {
       while (true) {
-        await this.startTimer(1, true);
-        new Notification("お疲れ様でした");
-        await this.startTimer(1, false);
-        new Notification("作業を開始しましょう");
+        const [bgColor, minutes, msg] = this.isWorkTime
+          ? ["rgb(250, 124, 74)", 25, "お疲れ様でした"]
+          : ["rgb(114, 224, 182)", 5, "作業を開始しましょう"];
+        this.body.style.backgroundColor = bgColor;
+        await this.startTimer(minutes);
+        new Notification(msg);
+        this.isWorkTime = !this.isWorkTime;
       }
     } else {
       clearInterval(this.timerId);

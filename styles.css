@@ -33,3 +33,7 @@ body > * {
   width: 200px;
   height: 100px;
 }
+.button:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
