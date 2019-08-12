@@ -7,12 +7,12 @@ class Timer {
     this.startTimer = this.startTimer.bind(this);
     this.clickHandler = this.clickHandler.bind(this);
     this.sound = document.querySelector("#sound");
+    this.timerId = null;
+    this.isStartButton = true;
+    this.isWorkTime = true;
+    this.pastMs = 0;
+    this.pastMsAll = 0;
   }
-  timerId;
-  isStartButton = true;
-  isWorkTime = true;
-  pastMs = 0;
-  pastMsAll = 0;
   startTimer(minutes) {
     this.button.textContent = "STOP";
     this.isStartButton = false;
